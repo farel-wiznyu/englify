@@ -33,7 +33,6 @@
           "imageWidth": 220
         }
       ],
-      "expo-audio",
       "expo-secure-store",
       [
         "expo-audio",
@@ -50,6 +49,9 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
