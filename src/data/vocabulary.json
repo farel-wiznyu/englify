@@ -1,0 +1,704 @@
+{
+  "categories": [
+    {
+      "id": "colors",
+      "name": "Colors",
+      "nameId": "Warna",
+      "emoji": "🎨",
+      "color": "pink"
+    },
+    {
+      "id": "animals",
+      "name": "Animals",
+      "nameId": "Hewan",
+      "emoji": "🐾",
+      "color": "green"
+    },
+    {
+      "id": "numbers",
+      "name": "Numbers",
+      "nameId": "Angka",
+      "emoji": "🔢",
+      "color": "blue"
+    },
+    {
+      "id": "fruits",
+      "name": "Fruits",
+      "nameId": "Buah",
+      "emoji": "🍎",
+      "color": "orange"
+    },
+    {
+      "id": "family",
+      "name": "Family",
+      "nameId": "Keluarga",
+      "emoji": "👪",
+      "color": "purple"
+    },
+    {
+      "id": "body",
+      "name": "Body Parts",
+      "nameId": "Anggota Tubuh",
+      "emoji": "🖐️",
+      "color": "pink"
+    },
+    {
+      "id": "objects",
+      "name": "Daily Objects",
+      "nameId": "Benda Sehari-hari",
+      "emoji": "🪑",
+      "color": "blue"
+    },
+    {
+      "id": "school",
+      "name": "School",
+      "nameId": "Sekolah",
+      "emoji": "🎒",
+      "color": "green"
+    }
+  ],
+  "items": [
+    {
+      "id": "colors-red",
+      "categoryId": "colors",
+      "word": "red",
+      "translation": "merah",
+      "emoji": "🔴",
+      "example": "The apple is red."
+    },
+    {
+      "id": "colors-blue",
+      "categoryId": "colors",
+      "word": "blue",
+      "translation": "biru",
+      "emoji": "🔵",
+      "example": "The sky is blue."
+    },
+    {
+      "id": "colors-green",
+      "categoryId": "colors",
+      "word": "green",
+      "translation": "hijau",
+      "emoji": "🟢",
+      "example": "The leaf is green."
+    },
+    {
+      "id": "colors-yellow",
+      "categoryId": "colors",
+      "word": "yellow",
+      "translation": "kuning",
+      "emoji": "🟡",
+      "example": "The sun is yellow."
+    },
+    {
+      "id": "colors-orange",
+      "categoryId": "colors",
+      "word": "orange",
+      "translation": "oranye",
+      "emoji": "🟠",
+      "example": "I see an orange circle."
+    },
+    {
+      "id": "colors-purple",
+      "categoryId": "colors",
+      "word": "purple",
+      "translation": "ungu",
+      "emoji": "🟣",
+      "example": "The grape is purple."
+    },
+    {
+      "id": "colors-black",
+      "categoryId": "colors",
+      "word": "black",
+      "translation": "hitam",
+      "emoji": "⚫",
+      "example": "The cat is black."
+    },
+    {
+      "id": "colors-white",
+      "categoryId": "colors",
+      "word": "white",
+      "translation": "putih",
+      "emoji": "⚪",
+      "example": "The cloud is white."
+    },
+    {
+      "id": "animals-cat",
+      "categoryId": "animals",
+      "word": "cat",
+      "translation": "kucing",
+      "emoji": "🐱",
+      "example": "The cat says meow."
+    },
+    {
+      "id": "animals-dog",
+      "categoryId": "animals",
+      "word": "dog",
+      "translation": "anjing",
+      "emoji": "🐶",
+      "example": "The dog runs fast."
+    },
+    {
+      "id": "animals-bird",
+      "categoryId": "animals",
+      "word": "bird",
+      "translation": "burung",
+      "emoji": "🐦",
+      "example": "The bird can fly."
+    },
+    {
+      "id": "animals-fish",
+      "categoryId": "animals",
+      "word": "fish",
+      "translation": "ikan",
+      "emoji": "🐟",
+      "example": "The fish can swim."
+    },
+    {
+      "id": "animals-cow",
+      "categoryId": "animals",
+      "word": "cow",
+      "translation": "sapi",
+      "emoji": "🐮",
+      "example": "The cow says moo."
+    },
+    {
+      "id": "animals-duck",
+      "categoryId": "animals",
+      "word": "duck",
+      "translation": "bebek",
+      "emoji": "🦆",
+      "example": "The duck is in the water."
+    },
+    {
+      "id": "animals-rabbit",
+      "categoryId": "animals",
+      "word": "rabbit",
+      "translation": "kelinci",
+      "emoji": "🐰",
+      "example": "The rabbit likes carrots."
+    },
+    {
+      "id": "animals-elephant",
+      "categoryId": "animals",
+      "word": "elephant",
+      "translation": "gajah",
+      "emoji": "🐘",
+      "example": "The elephant is big."
+    },
+    {
+      "id": "numbers-one",
+      "categoryId": "numbers",
+      "word": "one",
+      "translation": "satu",
+      "emoji": "1️⃣",
+      "example": "I have one nose."
+    },
+    {
+      "id": "numbers-two",
+      "categoryId": "numbers",
+      "word": "two",
+      "translation": "dua",
+      "emoji": "2️⃣",
+      "example": "I have two eyes."
+    },
+    {
+      "id": "numbers-three",
+      "categoryId": "numbers",
+      "word": "three",
+      "translation": "tiga",
+      "emoji": "3️⃣",
+      "example": "Three little birds."
+    },
+    {
+      "id": "numbers-four",
+      "categoryId": "numbers",
+      "word": "four",
+      "translation": "empat",
+      "emoji": "4️⃣",
+      "example": "A table has four legs."
+    },
+    {
+      "id": "numbers-five",
+      "categoryId": "numbers",
+      "word": "five",
+      "translation": "lima",
+      "emoji": "5️⃣",
+      "example": "I have five fingers."
+    },
+    {
+      "id": "numbers-six",
+      "categoryId": "numbers",
+      "word": "six",
+      "translation": "enam",
+      "emoji": "6️⃣",
+      "example": "I see six stars."
+    },
+    {
+      "id": "numbers-seven",
+      "categoryId": "numbers",
+      "word": "seven",
+      "translation": "tujuh",
+      "emoji": "7️⃣",
+      "example": "A week has seven days."
+    },
+    {
+      "id": "numbers-eight",
+      "categoryId": "numbers",
+      "word": "eight",
+      "translation": "delapan",
+      "emoji": "8️⃣",
+      "example": "I am eight years old."
+    },
+    {
+      "id": "fruits-apple",
+      "categoryId": "fruits",
+      "word": "apple",
+      "translation": "apel",
+      "emoji": "🍎",
+      "example": "I eat an apple."
+    },
+    {
+      "id": "fruits-banana",
+      "categoryId": "fruits",
+      "word": "banana",
+      "translation": "pisang",
+      "emoji": "🍌",
+      "example": "The banana is yellow."
+    },
+    {
+      "id": "fruits-orange",
+      "categoryId": "fruits",
+      "word": "orange",
+      "translation": "jeruk",
+      "emoji": "🍊",
+      "example": "The orange is sweet."
+    },
+    {
+      "id": "fruits-grape",
+      "categoryId": "fruits",
+      "word": "grape",
+      "translation": "anggur",
+      "emoji": "🍇",
+      "example": "The grape is small."
+    },
+    {
+      "id": "fruits-mango",
+      "categoryId": "fruits",
+      "word": "mango",
+      "translation": "mangga",
+      "emoji": "🥭",
+      "example": "I like mango juice."
+    },
+    {
+      "id": "fruits-watermelon",
+      "categoryId": "fruits",
+      "word": "watermelon",
+      "translation": "semangka",
+      "emoji": "🍉",
+      "example": "The watermelon is big."
+    },
+    {
+      "id": "fruits-strawberry",
+      "categoryId": "fruits",
+      "word": "strawberry",
+      "translation": "stroberi",
+      "emoji": "🍓",
+      "example": "The strawberry is red."
+    },
+    {
+      "id": "fruits-pineapple",
+      "categoryId": "fruits",
+      "word": "pineapple",
+      "translation": "nanas",
+      "emoji": "🍍",
+      "example": "The pineapple is sweet."
+    },
+    {
+      "id": "family-mother",
+      "categoryId": "family",
+      "word": "mother",
+      "translation": "ibu",
+      "emoji": "👩",
+      "example": "My mother is kind."
+    },
+    {
+      "id": "family-father",
+      "categoryId": "family",
+      "word": "father",
+      "translation": "ayah",
+      "emoji": "👨",
+      "example": "My father is strong."
+    },
+    {
+      "id": "family-sister",
+      "categoryId": "family",
+      "word": "sister",
+      "translation": "saudara perempuan",
+      "emoji": "👧",
+      "example": "My sister is funny."
+    },
+    {
+      "id": "family-brother",
+      "categoryId": "family",
+      "word": "brother",
+      "translation": "saudara laki-laki",
+      "emoji": "👦",
+      "example": "My brother plays ball."
+    },
+    {
+      "id": "family-baby",
+      "categoryId": "family",
+      "word": "baby",
+      "translation": "bayi",
+      "emoji": "👶",
+      "example": "The baby is sleeping."
+    },
+    {
+      "id": "family-grandmother",
+      "categoryId": "family",
+      "word": "grandmother",
+      "translation": "nenek",
+      "emoji": "👵",
+      "example": "My grandmother tells stories."
+    },
+    {
+      "id": "family-grandfather",
+      "categoryId": "family",
+      "word": "grandfather",
+      "translation": "kakek",
+      "emoji": "👴",
+      "example": "My grandfather is wise."
+    },
+    {
+      "id": "family-family",
+      "categoryId": "family",
+      "word": "family",
+      "translation": "keluarga",
+      "emoji": "👪",
+      "example": "I love my family."
+    },
+    {
+      "id": "body-eye",
+      "categoryId": "body",
+      "word": "eye",
+      "translation": "mata",
+      "emoji": "👁️",
+      "example": "I see with my eye."
+    },
+    {
+      "id": "body-ear",
+      "categoryId": "body",
+      "word": "ear",
+      "translation": "telinga",
+      "emoji": "👂",
+      "example": "I hear with my ear."
+    },
+    {
+      "id": "body-nose",
+      "categoryId": "body",
+      "word": "nose",
+      "translation": "hidung",
+      "emoji": "👃",
+      "example": "I smell with my nose."
+    },
+    {
+      "id": "body-mouth",
+      "categoryId": "body",
+      "word": "mouth",
+      "translation": "mulut",
+      "emoji": "👄",
+      "example": "I eat with my mouth."
+    },
+    {
+      "id": "body-hand",
+      "categoryId": "body",
+      "word": "hand",
+      "translation": "tangan",
+      "emoji": "✋",
+      "example": "Wave your hand."
+    },
+    {
+      "id": "body-foot",
+      "categoryId": "body",
+      "word": "foot",
+      "translation": "kaki",
+      "emoji": "🦶",
+      "example": "I have two feet."
+    },
+    {
+      "id": "body-tooth",
+      "categoryId": "body",
+      "word": "tooth",
+      "translation": "gigi",
+      "emoji": "🦷",
+      "example": "Brush your tooth."
+    },
+    {
+      "id": "body-leg",
+      "categoryId": "body",
+      "word": "leg",
+      "translation": "kaki (tungkai)",
+      "emoji": "🦵",
+      "example": "I kick with my leg."
+    },
+    {
+      "id": "objects-book",
+      "categoryId": "objects",
+      "word": "book",
+      "translation": "buku",
+      "emoji": "📖",
+      "example": "I read a book."
+    },
+    {
+      "id": "objects-chair",
+      "categoryId": "objects",
+      "word": "chair",
+      "translation": "kursi",
+      "emoji": "🪑",
+      "example": "Sit on the chair."
+    },
+    {
+      "id": "objects-bed",
+      "categoryId": "objects",
+      "word": "bed",
+      "translation": "tempat tidur",
+      "emoji": "🛏️",
+      "example": "I sleep on the bed."
+    },
+    {
+      "id": "objects-door",
+      "categoryId": "objects",
+      "word": "door",
+      "translation": "pintu",
+      "emoji": "🚪",
+      "example": "Open the door."
+    },
+    {
+      "id": "objects-clock",
+      "categoryId": "objects",
+      "word": "clock",
+      "translation": "jam",
+      "emoji": "🕐",
+      "example": "The clock is on the wall."
+    },
+    {
+      "id": "objects-cup",
+      "categoryId": "objects",
+      "word": "cup",
+      "translation": "cangkir",
+      "emoji": "☕",
+      "example": "I drink from a cup."
+    },
+    {
+      "id": "objects-key",
+      "categoryId": "objects",
+      "word": "key",
+      "translation": "kunci",
+      "emoji": "🔑",
+      "example": "The key opens the door."
+    },
+    {
+      "id": "objects-ball",
+      "categoryId": "objects",
+      "word": "ball",
+      "translation": "bola",
+      "emoji": "⚽",
+      "example": "Kick the ball."
+    },
+    {
+      "id": "school-pencil",
+      "categoryId": "school",
+      "word": "pencil",
+      "translation": "pensil",
+      "emoji": "✏️",
+      "example": "I write with a pencil."
+    },
+    {
+      "id": "school-bag",
+      "categoryId": "school",
+      "word": "bag",
+      "translation": "tas",
+      "emoji": "🎒",
+      "example": "My bag is blue."
+    },
+    {
+      "id": "school-ruler",
+      "categoryId": "school",
+      "word": "ruler",
+      "translation": "penggaris",
+      "emoji": "📏",
+      "example": "Use a ruler to draw."
+    },
+    {
+      "id": "school-scissors",
+      "categoryId": "school",
+      "word": "scissors",
+      "translation": "gunting",
+      "emoji": "✂️",
+      "example": "Scissors cut paper."
+    },
+    {
+      "id": "school-teacher",
+      "categoryId": "school",
+      "word": "teacher",
+      "translation": "guru",
+      "emoji": "🧑‍🏫",
+      "example": "The teacher is nice."
+    },
+    {
+      "id": "school-school",
+      "categoryId": "school",
+      "word": "school",
+      "translation": "sekolah",
+      "emoji": "🏫",
+      "example": "I go to school."
+    },
+    {
+      "id": "school-paper",
+      "categoryId": "school",
+      "word": "paper",
+      "translation": "kertas",
+      "emoji": "📄",
+      "example": "Draw on the paper."
+    },
+    {
+      "id": "school-computer",
+      "categoryId": "school",
+      "word": "computer",
+      "translation": "komputer",
+      "emoji": "💻",
+      "example": "I use a computer."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "colors-1",
+      "categoryId": "colors",
+      "title": "Colors",
+      "itemIds": [
+        "colors-red",
+        "colors-blue",
+        "colors-green",
+        "colors-yellow",
+        "colors-orange",
+        "colors-purple",
+        "colors-black",
+        "colors-white"
+      ],
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "animals-1",
+      "categoryId": "animals",
+      "title": "Animals",
+      "itemIds": [
+        "animals-cat",
+        "animals-dog",
+        "animals-bird",
+        "animals-fish",
+        "animals-cow",
+        "animals-duck",
+        "animals-rabbit",
+        "animals-elephant"
+      ],
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "numbers-1",
+      "categoryId": "numbers",
+      "title": "Numbers",
+      "itemIds": [
+        "numbers-one",
+        "numbers-two",
+        "numbers-three",
+        "numbers-four",
+        "numbers-five",
+        "numbers-six",
+        "numbers-seven",
+        "numbers-eight"
+      ],
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "fruits-1",
+      "categoryId": "fruits",
+      "title": "Fruits",
+      "itemIds": [
+        "fruits-apple",
+        "fruits-banana",
+        "fruits-orange",
+        "fruits-grape",
+        "fruits-mango",
+        "fruits-watermelon",
+        "fruits-strawberry",
+        "fruits-pineapple"
+      ],
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "family-1",
+      "categoryId": "family",
+      "title": "Family",
+      "itemIds": [
+        "family-mother",
+        "family-father",
+        "family-sister",
+        "family-brother",
+        "family-baby",
+        "family-grandmother",
+        "family-grandfather",
+        "family-family"
+      ],
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "body-1",
+      "categoryId": "body",
+      "title": "Body Parts",
+      "itemIds": [
+        "body-eye",
+        "body-ear",
+        "body-nose",
+        "body-mouth",
+        "body-hand",
+        "body-foot",
+        "body-tooth",
+        "body-leg"
+      ],
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "objects-1",
+      "categoryId": "objects",
+      "title": "Daily Objects",
+      "itemIds": [
+        "objects-book",
+        "objects-chair",
+        "objects-bed",
+        "objects-door",
+        "objects-clock",
+        "objects-cup",
+        "objects-key",
+        "objects-ball"
+      ],
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "school-1",
+      "categoryId": "school",
+      "title": "School",
+      "itemIds": [
+        "school-pencil",
+        "school-bag",
+        "school-ruler",
+        "school-scissors",
+        "school-teacher",
+        "school-school",
+        "school-paper",
+        "school-computer"
+      ],
+      "estimatedMinutes": 5
+    }
+  ]
+}
