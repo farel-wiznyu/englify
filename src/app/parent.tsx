@@ -6,6 +6,7 @@ import { Colors, Outline, Radius } from '@/constants/theme';
 import { categories, getItem } from '@/data/content';
 import type { ChildProfile } from '@/data/types';
 import { useStats } from '@/hooks/useStats';
+import { UpdateInfo } from '@/components/UpdateInfo';
 import { deleteAllRemoteData, flushNow, resetAllRemoteProgress } from '@/hooks/useSync';
 import { useAppAuth } from '@/lib/auth';
 import { useAppStore } from '@/store/useAppStore';
@@ -187,6 +188,7 @@ export default function ParentArea() {
         )}
       </View>
 
+      <UpdateInfo />
       <AppText variant="caption" center>
         Privacy Policy · Terms (tautan akan ditambahkan sebelum rilis)
       </AppText>

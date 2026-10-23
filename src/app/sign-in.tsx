@@ -5,6 +5,7 @@ import * as WebBrowser from 'expo-web-browser';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
 
+import { UpdateInfo } from '@/components/UpdateInfo';
 import { AppText, Art, Button, Floating, Screen, Sticker } from '@/components/ui';
 import { Colors } from '@/constants/theme';
 import { clerkConfigured } from '@/lib/auth';
@@ -81,6 +82,9 @@ export default function SignIn() {
         ) : (
           <Button label="Mode lokal (tanpa login)" onPress={() => router.replace('/')} />
         )}
+      </View>
+      <View style={{ paddingBottom: 24 }}>
+        <UpdateInfo />
       </View>
     </Screen>
   );
