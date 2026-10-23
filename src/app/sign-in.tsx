@@ -3,7 +3,7 @@ import * as AuthSession from 'expo-auth-session';
 import { router } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import { useCallback, useEffect, useState } from 'react';
-import { View } from 'react-native';
+import { Linking, View } from 'react-native';
 
 import { UpdateInfo } from '@/components/UpdateInfo';
 import { AppText, Art, Button, Floating, Screen, Sticker } from '@/components/ui';
@@ -12,6 +12,17 @@ import { clerkConfigured } from '@/lib/auth';
 import { clearFlowLog, logFlow, readFlowLog, useAuthFlow } from '@/lib/authFlow';
 
 WebBrowser.maybeCompleteAuthSession();
+
+/** Polls `get` until it returns something or `ms` elapse. */
+async function waitFor<T>(get: () => T | null, ms: number): Promise<T | null> {
+  const end = Date.now() + ms;
+  while (Date.now() < end) {
+    const value = get();
+    if (value) return value;
+    await new Promise((resolve) => setTimeout(resolve, 100));
+  }
+  return get();
+}
 
 function GoogleSignIn() {
   const { startSSOFlow } = useSSO();
@@ -30,6 +41,12 @@ function GoogleSignIn() {
     setBusy(true);
     await clearFlowLog();
     await logFlow('tombol Google ditekan');
+    // On Android the browser result can come back as "dismiss" at the very moment the redirect deep link
+    // arrives, so the URL (with the one-time nonce) never reaches Clerk. Listen for it ourselves.
+    let capturedUrl: string | null = null;
+    const linkSub = Linking.addEventListener('url', ({ url }) => {
+      capturedUrl = url;
+    });
     try {
       // Must be on Clerk's redirect allowlist, otherwise the callback lacks the rotating token
       // nonce and the session never completes (Expo Go uses exp://, a standalone build englify://).
@@ -48,8 +65,25 @@ function GoogleSignIn() {
           `${signIn?.firstFactorVerification?.status ?? '-'} signUp=${signUp?.status ?? '-'}`,
       );
 
-      if (createdSessionId && setActive) {
-        await setActive({ session: createdSessionId });
+      let sessionId = createdSessionId;
+      if (!sessionId && authSessionResult?.type !== 'success' && signIn) {
+        const link = await waitFor(() => capturedUrl, 3000);
+        const nonce = link?.match(/[?&]rotating_token_nonce=([^&#]*)/)?.[1];
+        await logFlow(`url dari Linking: ${link ? 'diterima' : 'tidak ada'} nonce=${nonce ? 'ada' : 'tidak'}`);
+        if (link && nonce) {
+          await signIn.reload({ rotatingTokenNonce: decodeURIComponent(nonce) });
+          if (signIn.firstFactorVerification.status === 'transferable') {
+            await signUp?.create({ transfer: true });
+          }
+          sessionId = signUp?.createdSessionId ?? signIn.createdSessionId;
+          await logFlow(
+            `manual: signIn=${signIn.status}/${signIn.firstFactorVerification.status} sesi=${sessionId ? 'ada' : 'tidak'}`,
+          );
+        }
+      }
+
+      if (sessionId && setActive) {
+        await setActive({ session: sessionId });
         await logFlow('setActive berhasil, pindah ke halaman utama');
         router.replace('/');
       } else if (authSessionResult && authSessionResult.type !== 'success') {
@@ -64,6 +98,7 @@ function GoogleSignIn() {
       await logFlow(`error: ${detail}`);
       flow.setFailed(`Login gagal: ${detail}`);
     } finally {
+      linkSub.remove();
       setBusy(false);
     }
   }, [startSSOFlow]);
