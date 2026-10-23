@@ -59,8 +59,9 @@ export default function RootLayout() {
               screenOptions={{
                 headerShown: false,
                 contentStyle: { backgroundColor: Colors.cream },
-              }}
-            />
+              }}>
+              <Stack.Screen name="sso-callback" options={{ animation: 'fade' }} />
+            </Stack>
           </QueryClientProvider>
         </AuthProvider>
       </SafeAreaProvider>
