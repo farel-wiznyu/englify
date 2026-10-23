@@ -20,18 +20,29 @@ function GoogleSignIn() {
     setBusy(true);
     setError(null);
     try {
-      const { createdSessionId, setActive } = await startSSOFlow({
+      // Must be on Clerk's redirect allowlist, otherwise the callback lacks the rotating token
+      // nonce and the session never completes (Expo Go uses exp://, a standalone build englify://).
+      const redirectUrl = AuthSession.makeRedirectUri();
+      const { createdSessionId, setActive, authSessionResult, signIn, signUp } = await startSSOFlow({
         strategy: 'oauth_google',
-        redirectUrl: AuthSession.makeRedirectUri(),
+        redirectUrl,
       });
       if (createdSessionId && setActive) {
         await setActive({ session: createdSessionId });
         router.replace('/');
+      } else if (authSessionResult && authSessionResult.type !== 'success') {
+        setError('Login dibatalkan atau jendela Google ditutup. Coba lagi ya.');
       } else {
-        setError('Login belum selesai. Coba lagi ya.');
+        setError(
+          `Login belum selesai. Pastikan alamat ini diizinkan di Clerk: ${redirectUrl}\n` +
+            `(signIn: ${signIn?.status ?? '-'} / ${signIn?.firstFactorVerification?.status ?? '-'}, signUp: ${signUp?.status ?? '-'})`,
+        );
       }
-    } catch {
-      setError('Login gagal. Periksa koneksi internet lalu coba lagi.');
+    } catch (e) {
+      const detail =
+        (e as { errors?: { longMessage?: string; message?: string }[] })?.errors?.[0]?.longMessage ??
+        (e instanceof Error ? e.message : String(e));
+      setError(`Login gagal: ${detail}`);
     } finally {
       setBusy(false);
     }
